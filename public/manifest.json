@@ -2,5 +2,8 @@
     "short_name": "walleteer",
     "name": "evmos wallet by walleteer team",
     "version": "0.0.1",
-    "manifest_version": 3
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "index.html"
+    }
 }
