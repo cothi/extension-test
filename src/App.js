@@ -1,3 +1,4 @@
+/*global chrome*/
 import './App.css'
 import styled from 'styled-components'
 
@@ -7,7 +8,11 @@ const Wrapper = styled.div`
 `
 
 function App() {
-    chrome.storage.local.set({ key: 'test' })
+    let value = 'te'
+    chrome.storage.sync.set({ key: value }, function () {
+        console.log('Value is set to ' + value)
+    })
+
     return <Wrapper></Wrapper>
 }
 

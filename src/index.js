@@ -1,9 +1,11 @@
+/*global chrome*/
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 import { createHashRouter, Link, RouterProvider } from 'react-router-dom'
 import App from './App'
+import { BarLoader } from 'react-spinners'
 
 const router = createHashRouter([
     {
@@ -14,10 +16,7 @@ const router = createHashRouter([
                 <Link to="about">About Us</Link>
             </div>
         ),
-        loader: async () => {
-            let value = chrome.storage.local.get('key')
-            console.log('key', value)
-        },
+        loader: async () => {},
     },
     {
         path: 'about',
