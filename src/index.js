@@ -1,10 +1,10 @@
 import React from 'react'
-import  { createRoot } from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
-import { createBrowserRouter, Link, RouterProvider } from 'react-router-dom'
+import { createHashRouter, Link, RouterProvider } from 'react-router-dom'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: '/',
         element: (
